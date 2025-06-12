@@ -105,7 +105,11 @@ export default function CharacterDetails() {
             <Paper sx={{ flex: 1, p: 1, flexGrow: "revert" }}>
               <Typography variant="h5" sx={{ alignContent: "center" }}>Overview</Typography>
               <Divider sx={{ mb: 1 }} />
-              <Typography>No overview.</Typography>
+              {
+                character.overview
+                  ? <Typography variant="body1">{character.overview}</Typography>
+                  : <Typography variant="body1" sx={{fontStyle: "italic"}}>None</Typography>
+              }
             </Paper>
             <Paper sx={{ flex: 1, p: 1, flexGrow: "revert" }}>
               <Stack direction="row">
@@ -139,7 +143,7 @@ export default function CharacterDetails() {
                 }
                 {
                   combos.length == 0 && !editing &&
-                  <Typography variant="body1">No combos yet.</Typography>
+                  <Typography variant="body1" sx={{fontStyle: "italic"}}>None</Typography>
                 }
                 {
                   editing &&
