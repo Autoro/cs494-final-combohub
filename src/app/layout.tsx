@@ -1,6 +1,6 @@
 import ComboHubAppBar from "@/components/ComboHubAppBar";
-import ComboHubClientProviders from "@/components/ComboHubThemeProvider";
-import { Box, Container } from "@mui/material";
+import ComboHubClientProviders from "@/components/ComboHubClientProvider";
+import { Box } from "@mui/material";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
 

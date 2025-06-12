@@ -1,9 +1,11 @@
+import { withGamesContext } from "@/contexts/gamesContext";
 import { Button, Menu, MenuItem, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { MouseEvent, useState } from "react";
 
 export default function GameMenu() {
   const [menuElement, setMenuElement] = useState<HTMLButtonElement | null>(null);
+  const { games } = withGamesContext();
   const router = useRouter();
 
   const handleMenuOpen = (e: MouseEvent<HTMLButtonElement>) => {
@@ -36,9 +38,11 @@ export default function GameMenu() {
         onClose={handleMenuClose}
         anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
       >
-        <MenuItem onClick={() => handleMenuClick("#")}>Game 1</MenuItem>
-        <MenuItem onClick={() => handleMenuClick("#")}>Game 2</MenuItem>
-        <MenuItem onClick={() => handleMenuClick("#")}>Game 3</MenuItem>
+        {
+          games.map((game, i) =>
+            <MenuItem key={i} onClick={() => handleMenuClick(`/games/${game.id}`)}>{game.name}</MenuItem>
+          )
+        }
         <MenuItem onClick={() => handleMenuClick("/games")}>View All</MenuItem>
       </Menu>
     </>

@@ -1,5 +1,6 @@
 "use client";
 
+import { GamesContextProvider } from "@/contexts/gamesContext";
 import { UserContextProvider } from "@/contexts/userContext";
 import theme from "@/theme/default";
 import { ThemeProvider, CssBaseline } from "@mui/material";
@@ -9,8 +10,10 @@ export default function ComboHubClientProviders({ children }: { children: ReactN
   return (
     <ThemeProvider theme={theme}>
       <UserContextProvider>
-        <CssBaseline />
-        {children}
+        <GamesContextProvider>
+          <CssBaseline />
+          {children}
+        </GamesContextProvider>
       </UserContextProvider>
     </ThemeProvider>
   );
