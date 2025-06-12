@@ -8,7 +8,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Home() {
+export default function CharacterList() {
   const { gameId } = useParams();
   const { findGame } = withGamesContext();
   const [characters, setCharacters] = useState<Character[]>([]);

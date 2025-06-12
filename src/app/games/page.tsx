@@ -2,9 +2,9 @@
 
 import GameCard from "@/components/GameCard";
 import { withGamesContext } from "@/contexts/gamesContext";
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
-export default function Home() {
+export default function GameList() {
   const { games } = withGamesContext();
 
   return (
