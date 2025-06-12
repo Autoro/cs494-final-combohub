@@ -1,4 +1,4 @@
-import { withUserContext } from "../contexts/userContext";
+import { withUserContext } from "@/contexts/userContext";
 import { Avatar, Box, IconButton, Menu, MenuItem } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { MouseEvent, useState } from "react";

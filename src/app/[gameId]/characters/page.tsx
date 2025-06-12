@@ -1,9 +1,9 @@
 "use client";
 
-import CharacterCard from "../../../components/CharacterCard";
-import { withGamesContext } from "../../../contexts/gamesContext";
-import { Character } from "../../../models/character";
-import { Game } from "../../../models/game";
+import CharacterCard from "@/components/CharacterCard";
+import { withGamesContext } from "@/contexts/gamesContext";
+import { Character } from "@/models/character";
+import { Game } from "@/models/game";
 import { Box, Grid, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";

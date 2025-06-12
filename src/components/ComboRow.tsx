@@ -1,5 +1,5 @@
-import { withUserContext } from "../contexts/userContext";
-import { Combo } from "../models/combo";
+import { withUserContext } from "@/contexts/userContext";
+import { Combo } from "@/models/combo";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 
 export default function ComboRow(props: { combo: Combo; onDelete: (combo: Combo) => void; }) {
