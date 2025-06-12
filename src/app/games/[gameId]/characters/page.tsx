@@ -13,15 +13,6 @@ export default function CharacterList() {
   const { findGame } = withGamesContext();
   const [characters, setCharacters] = useState<Character[]>([]);
 
-  let game = null;
-  if (!gameId || !(game = findGame(gameId.toString()))) {
-    return (
-      <Box sx={{ mt: 2 }}>
-        <Typography>Invalid game selected.</Typography>
-      </Box>
-    );
-  }
-
   useEffect(() => {
     fetch(`/api/games/${gameId}/characters`)
       .then((response) => response.json())
@@ -30,6 +21,15 @@ export default function CharacterList() {
         setCharacters(characters);
       });
   }, []);
+
+  let game = null;
+  if (!gameId || !(game = findGame(gameId.toString()))) {
+    return (
+      <Box sx={{ mt: 2 }}>
+        <Typography>Loading...</Typography>
+      </Box>
+    );
+  }
 
   return (
     <Grid container spacing={2} sx={{ mt: 2 }}>

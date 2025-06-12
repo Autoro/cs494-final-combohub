@@ -11,20 +11,20 @@ export default function CharacterDetails() {
   const { findGame } = withGamesContext();
   const [character, setCharacter] = useState<Character | null>(null);
 
-  let game = null;
-  if (!gameId || !(game = findGame(gameId.toString()))) {
-    return (
-      <Box sx={{ mt: 2 }}>
-        <Typography>Invalid game selected.</Typography>
-      </Box>
-    );
-  }
-
   useEffect(() => {
     fetch(`/api/characters/${characterId}`)
       .then((response) => response.json())
       .then((data: { character: Character; }) => setCharacter(data.character));
   }, []);
+
+  let game = null;
+  if (!gameId || !(game = findGame(gameId.toString()))) {
+    return (
+      <Box sx={{ mt: 2 }}>
+        <Typography>Loading...</Typography>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ mt: 2 }}>
