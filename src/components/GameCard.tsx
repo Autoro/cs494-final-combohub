@@ -6,7 +6,7 @@ export default function GameCard(props: { game: Game; }) {
   const router = useRouter();
 
   const handleCardClick = () => {
-    router.push(`/games/${props.game.id}/characters`);
+    router.push(`/${props.game.id}/characters`);
   };
 
   return (

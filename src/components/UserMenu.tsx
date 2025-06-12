@@ -48,7 +48,6 @@ export default function UserMenu() {
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        <MenuItem onClick={() => handleMenuClick("profile")}>Profile</MenuItem>
         <MenuItem onClick={() => handleMenuClick("logout")}>Logout</MenuItem>
       </Menu>
     </>

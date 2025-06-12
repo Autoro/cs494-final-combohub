@@ -2,7 +2,6 @@
 
 import { AppBar, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
-import GameMenu from "./GameMenu";
 import UserMenu from "./UserMenu";
 
 export default function ComboHubAppBar() {
@@ -21,7 +20,6 @@ export default function ComboHubAppBar() {
               COMBOHUB
             </Typography>
           </Link>
-          <GameMenu />
           <UserMenu />
         </Toolbar>
       </AppBar>
