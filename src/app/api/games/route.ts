@@ -1,4 +1,4 @@
-import { db } from "@/services/firebase";
+import { db } from "../../../services/firebase";
 import { collection, getDocs } from "firebase/firestore";
 export async function GET() {
   const snapshot = await getDocs(collection(db, "games"));

@@ -1,10 +1,10 @@
 "use client";
 
-import ComboRow from "@/components/ComboRow";
-import { withGamesContext } from "@/contexts/gamesContext";
-import { withUserContext } from "@/contexts/userContext";
-import { Character } from "@/models/character";
-import { Combo } from "@/models/combo";
+import ComboRow from "../../../../components/ComboRow";
+import { withGamesContext } from "../../../../contexts/gamesContext";
+import { withUserContext } from "../../../../contexts/userContext";
+import { Character } from "../../../../models/character";
+import { Combo } from "../../../../models/combo";
 import { Box, Button, Divider, Grid, Paper, Stack, TextField, Tooltip, Typography } from "@mui/material";
 import { useParams } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";

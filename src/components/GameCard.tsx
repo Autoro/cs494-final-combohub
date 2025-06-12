@@ -1,4 +1,4 @@
-import { Game } from "@/models/game";
+import { Game } from "../models/game";
 import { Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 

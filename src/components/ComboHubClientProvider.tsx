@@ -1,8 +1,8 @@
 "use client";
 
-import { GamesContextProvider } from "@/contexts/gamesContext";
-import { UserContextProvider } from "@/contexts/userContext";
-import theme from "@/theme/default";
+import { GamesContextProvider } from "../contexts/gamesContext";
+import { UserContextProvider } from "../contexts/userContext";
+import theme from "../theme/default";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { ReactNode } from "react";
 

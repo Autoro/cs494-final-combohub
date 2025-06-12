@@ -1,4 +1,4 @@
-import { Game } from "@/models/game";
+import { Game } from "../models/game";
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 
 interface GamesContextType {

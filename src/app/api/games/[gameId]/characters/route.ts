@@ -1,4 +1,4 @@
-import { db } from "@/services/firebase";
+import { db } from "../../../../../services/firebase";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { NextRequest } from "next/server";
 
