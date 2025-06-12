@@ -3,6 +3,7 @@ import { createContext, ReactNode, useContext, useEffect, useState } from "react
 
 interface GamesContextType {
   games: Game[];
+  findGame: (gameId: string) => Game | undefined;
 }
 
 const GamesContext = createContext<GamesContextType | undefined>(undefined);
@@ -29,8 +30,12 @@ export const GamesContextProvider = ({ children }: { children: ReactNode; }) => 
       });
   }, []);
 
+  const findGame = (gameId: string) => {
+    return games.find((game) => game.id == gameId);
+  };
+
   return (
-    <GamesContext.Provider value={{ games }}>
+    <GamesContext.Provider value={{ games, findGame }}>
       {children}
     </GamesContext.Provider>
   );
