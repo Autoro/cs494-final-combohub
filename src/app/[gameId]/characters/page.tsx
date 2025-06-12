@@ -1,7 +1,7 @@
 "use client";
 
 import CharacterCard from "@/components/CharacterCard";
-import { withGamesContext } from "@/contexts/gamesContext";
+import { useGamesContext } from "@/contexts/gamesContext";
 import { Character } from "@/models/character";
 import { Game } from "@/models/game";
 import { Box, Grid, Typography } from "@mui/material";
@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 
 export default function CharacterList() {
   const { gameId } = useParams();
-  const { findGame } = withGamesContext();
+  const { findGame } = useGamesContext();
   const [characters, setCharacters] = useState<Character[]>([]);
 
   useEffect(() => {

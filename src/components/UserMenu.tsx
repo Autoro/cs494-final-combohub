@@ -1,10 +1,10 @@
-import { withUserContext } from "@/contexts/userContext";
+import { useUserContext } from "@/contexts/userContext";
 import { Avatar, Box, IconButton, Menu, MenuItem } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { MouseEvent, useState } from "react";
 
 export default function UserMenu() {
-  const { user, logIn, logOut } = withUserContext();
+  const { user, logIn, logOut } = useUserContext();
   const [menuElement, setMenuElement] = useState<HTMLButtonElement | null>(null);
   const router = useRouter();
 

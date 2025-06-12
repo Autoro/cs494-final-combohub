@@ -10,7 +10,7 @@ type UserContextType = {
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
-export const withUserContext = () => {
+export const useUserContext = () => {
   const context = useContext(UserContext);
 
   if (!context) {

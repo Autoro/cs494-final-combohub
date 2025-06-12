@@ -1,11 +1,11 @@
 "use client";
 
 import GameCard from "@/components/GameCard";
-import { withGamesContext } from "@/contexts/gamesContext";
+import { useGamesContext } from "@/contexts/gamesContext";
 import { Grid } from "@mui/material";
 
 export default function GameList() {
-  const { games } = withGamesContext();
+  const { games } = useGamesContext();
 
   return (
     <Grid container spacing={2} sx={{mt: 2}}>

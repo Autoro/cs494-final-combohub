@@ -1,8 +1,8 @@
 "use client";
 
 import ComboRow from "@/components/ComboRow";
-import { withGamesContext } from "@/contexts/gamesContext";
-import { withUserContext } from "@/contexts/userContext";
+import { useGamesContext } from "@/contexts/gamesContext";
+import { useUserContext } from "@/contexts/userContext";
 import { Character } from "@/models/character";
 import { Combo } from "@/models/combo";
 import { Box, Button, Divider, Grid, Paper, Stack, TextField, Tooltip, Typography } from "@mui/material";
@@ -11,8 +11,8 @@ import { ChangeEvent, useEffect, useState } from "react";
 
 export default function CharacterDetails() {
   const { gameId, characterId } = useParams();
-  const { user } = withUserContext();
-  const { findGame } = withGamesContext();
+  const { user } = useUserContext();
+  const { findGame } = useGamesContext();
   const [character, setCharacter] = useState<Character | null>(null);
   const [combos, setCombos] = useState<Combo[]>([]);
   const [editing, setEditing] = useState<boolean>(false);

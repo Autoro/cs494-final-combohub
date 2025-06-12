@@ -8,7 +8,7 @@ interface GamesContextType {
 
 const GamesContext = createContext<GamesContextType | undefined>(undefined);
 
-export const withGamesContext = () => {
+export const useGamesContext = () => {
   const context = useContext(GamesContext);
 
   if (!context) {
