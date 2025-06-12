@@ -40,7 +40,7 @@ export default function GameMenu() {
       >
         {
           games.map((game, i) =>
-            <MenuItem key={i} onClick={() => handleMenuClick(`/games/${game.id}`)}>{game.name}</MenuItem>
+            <MenuItem key={i} onClick={() => handleMenuClick(`/games/${game.id}/characters`)}>{game.name}</MenuItem>
           )
         }
         <MenuItem onClick={() => handleMenuClick("/games")}>View All</MenuItem>

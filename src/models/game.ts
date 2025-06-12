@@ -1,5 +1,6 @@
 export interface Game {
   id: string;
   name: string;
-  logo: string;
+  logoFile: string;
+  slug: string;
 }

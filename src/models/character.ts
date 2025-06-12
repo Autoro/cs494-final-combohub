@@ -1,5 +1,6 @@
 export interface Character {
   id: string;
+  gameId: string;
   name: string;
-  imageUrl: string;
+  imageFile: string;
 }
